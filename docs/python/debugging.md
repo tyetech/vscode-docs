@@ -125,7 +125,7 @@ The configuration drop-down provides a variety of different options for general 
 | Integrated Terminal/Console | Specifies `"console": "integratedTerminal"` and removes the `RedirectOutput` option. |
 | External Terminal/Console | Specifies `"console": "externalTerminal"` and removes the `RedirectOutput` option. |
 | Django | Specifies `"program": "${workspaceFolder}/manage.py"` and `"args": ["runserver", "--noreload"]`, and adds "DjangoDebugging" to `debugOptions`. Note that automatic reloading of Django apps is not possible while debugging. To debug Django HTML templates, just add breakpoints to `templates`. |
-| Flask | Specifies `"stopOnEntry": false`, `"env": {"FLASK_APP": "${workspaceFolder}/quickstart/app.py"}` and `"args": ["run", "--no-debugger","--no-reload"]`; note that you must modify the `program` setting to point to the flask executable, which is typically located with the Python interpreter. |
+| Flask | Specifies `"stopOnEntry": false`, `"env": {"FLASK_APP": "${workspaceFolder}/app.py"}` and `"args": ["run", "--no-debugger","--no-reload"]`. The `"module": "flask"` property is used instead of `program`. |
 | Watson | Specifies `"program": "${workspaceFolder}/console.py"` and `"args": ["dev", "runserver", "--noreload=True"]` |
 | Attach (Remote Debug) | See [Remote debugging](#remote-debugging) below. |
 
